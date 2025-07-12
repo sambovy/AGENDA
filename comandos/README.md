@@ -19,4 +19,6 @@ git config --global init.defaultBranch main
 git init
 git add .
 git commit -m 'Mensagem'
-git remote add origin URL_DO_GIT
+git remote add origin https://github.com/sambovy/Agenda.git
+
+git push orign main -u
