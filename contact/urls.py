@@ -1,7 +1,14 @@
 from django.urls import path
 from contact import views
 
+app_name = 'contact'
+
 urlpatterns = [
-    path('', views.index, name='index'),
-    path('<int:contact_id>/', views.contact, name='contact'),
+    path('', views.index, name='index'),  # type:ignore
+    path('search/', views.search, name='search'),  # type:ignore
+
+    #CRUD
+    
+    path('contact/<int:contact_id>/detail/', views.contact, name='contact'),  # type:ignore
+    path('contact/create/', views.create, name='create'),  # type:ignore
 ]
